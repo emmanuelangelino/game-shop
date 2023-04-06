@@ -1,5 +1,4 @@
----
-Irei editar o readme com mais calma posteriormente.
+# Irei editar o readme com mais calma posteriormente.
 ---
 Deixando uma breve explicação sobre o Game Shop:
 É um site feito em HTML, utilizando CSS e JS para estilizar e trazer novas funcionalidades.

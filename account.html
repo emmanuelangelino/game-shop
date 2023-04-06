@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Gamer Shop | Perfil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body onload="loadProfile()">
+    <div class="page">
+        <header>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="cart" onclick="showCart()">
+                    <img src="icons/cart.svg" alt="CART">
+                    <p>Carrinho</p>
+                </div>
+
+                <div class="account" onclick="exitAccount()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Sair</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="user-info">
+                <img src="icons/account.svg" alt="acc" class="account-logo">
+                <div class="info">
+                    <div class="user-info-item">
+                        <h2 class="user-info-item-header">Informações</h2>
+                        <div class="user-info-item-data">
+                            <p>Nome completo: <span id="full-name"></span></p>
+                        </div>
+                        <div class="stick"></div>
+                        <div class="user-info-item-data">
+                            <p>Número do telefone: <span id="phone-number"></span></p>
+                        </div>
+                        <div class="stick"></div>
+                        <div class="user-info-item-data">
+                            <p>Email: <span id="email"></span></p>
+                        </div>
+                        <div class="stick"></div>
+                        <div class="user-info-item-data">
+                            <p>Dinheiro total gasto: <span id="money-spent">0 R$</span></p>
+                        </div>
+                        <div class="stick"></div>
+                        <div class="user-info-item-change">
+                            <p>Quer modificar alguma coisa? <br> Clique aqui -></p>
+                            <button class="user-info-change" onclick="showSettings()">
+                                <img src="icons/settings.svg" alt="settings" class="settings">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bought-items">
+                        <h2 class="bought-items-header">Histórico das suas compras</h2>
+                        <div id="history-empty" class="hide history-empty">
+                            <p>Você ainda não comprou nada...</p>
+                            <img src="img/jdun.png" alt="jdun" style="margin-top: 4vh; height: 55vh;">
+                        </div>
+
+                        <div id="history-display" class="hide">
+                            <table cellpadding="0" cellspacing="0" border="0" class="history-table">
+                                <thead class="history-table">
+                                    <tr class="history-table">
+                                        <th width="40%">Nome do produto</th>
+                                        <th class='text-center' width="20%">Preço</th>
+                                        <th class='text-center' width="20%">Quantidade</th>
+                                        <th class='text-center' width="20%">Valor total</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                            <div class="tbl-content-history">
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tbody id="historyTableBody">
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tbl-footer-history">
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tfoot>
+                                        <tr>
+                                            <td width="40%"></td>
+                                            <td class="text-center" width="20%">Total:</td>
+                                            <td id="history-item-count" class="text-center" colspan="2" width="20%">
+                                            </td>
+                                            <td id="history-total-amount" class="text-center" width="20%"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo non-copy">
+                <a href="#" class="decor-none">Gamer Shop</a>
+            </div>
+            <div class="right-side uppercase non-copy">
+                <div class="about-us">
+                    <a href="about-us.html">Sobre</a>
+                </div>
+                <div class="sf" style="display: none;"></div>
+                <div class="contacts">
+                    <a href="contacts.html">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

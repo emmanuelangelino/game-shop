@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Gamer Shop | Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div id="log-window" class="hide">
+            <div class="sign">
+                <h1>Login</h1>
+                <div class="sign-card">
+                    <input type="text" id="phone" class="i" placeholder="Telefone">
+                    <hr class="sign-hr">
+                    <input type="password" id="password" class="i" placeholder="Senha" autocomplete="off">
+                    <hr class="sign-hr">
+                    <p>
+                        Ainda não possui uma conta?
+                        <a href="register.html" style="text-decoration: underline;">Registrar</a>
+                    </p>
+                    <button class="sign-btn" id="log-btn" onclick="loginCheck()">
+                        Login
+                    </button>
+                </div>
+            </div>
+            <div class="cover" onclick="loginHide()"></div>
+        </div>
+
+        <header>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="cart" onclick="showCart()">
+                    <img src="icons/cart.svg" alt="CART">
+                    <p>Carrinho</p>
+                </div>
+
+                <div class="account" id="sign-in" onclick="loginDisplay()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Login</p>
+                </div>
+
+                <div class="account hide" id="acc" onclick="showProfile()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Conta</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="all">
+            <div class="container">
+                <div class="content">
+                    <div class="left-side">
+                        <div class="address">
+                            <img src="icons/place-maker.svg" alt="">
+                            <div class="topic">Endereço</div>
+                            <div class="text-one">São Paulo</div>
+                            <div class="text-two">Rua do Exemplo, 9</div>
+                        </div>
+                        <div class="phone" style="padding: 4vh 0;">
+                            <img src="icons/telephone.svg" alt="">
+                            <div class="topic">Telefone</div>
+                            <div class="text-one">(11)99999-2222</div>
+                            <div class="text-two">(11)99999-3333</div>
+                        </div>
+                        <div class="email">
+                            <img src="icons/secured-letter.svg" alt="">
+                            <div class="topic">Email</div>
+                            <div class="text-one">atendimento@gamershop.com</div>
+                        </div>
+                    </div>
+                    <div class="right-side1">
+                        <div class="topic-text">Envie uma mensagem pra gente</div>
+                        <p>Se tiver perguntas ou sugestões, por favor, preencha o formulário abaixo.</p>
+                        <form action="contacts.php" method="POST">
+                            <div class="input-box">
+                                <input type="text" name="name" id="contacts-name" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" name="email" id="contacts-email" placeholder="Digite seu email" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" name="phone" id="contacts-phone" placeholder="Digite seu telefone para contato" required>
+                            </div>
+                            <div class="input-box message-box">
+                                <textarea id="contacts-message" placeholder="Digite sua mensagem aqui" required></textarea>
+                            </div>
+                            <div class="button-cont">
+                                <input type="button" onclick="sendFeedback()" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="about-us">
+                    <a href="about-us.html">Sobre</a>
+                </div>
+                <div class="sf" style="display: none;"></div>
+                <div class="contacts">
+                    <a href="contacts.html">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

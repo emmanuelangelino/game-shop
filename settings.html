@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Gamer Shop | Configs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body onload="loadSettings()">
+    <div class="page">
+        <div id="phone-modal" class="hide">
+            <div class="sign">
+                <h1>Modificar</h1>
+                <div class="sign-card">
+                    <input type="text" id="phone" class="i" placeholder="Número do telefone">
+                    <hr class="sign-hr">
+                    <button class="sign-btn" id="log-btn" onclick="changePhone()">
+                        Modificar
+                    </button>
+                </div>
+            </div>
+            <div class="cover" onclick="phoneHide()"></div>
+        </div>
+
+        <div id="email-modal" class="hide">
+            <div class="sign">
+                <h1>Modificar</h1>
+                <div class="sign-card">
+                    <input type="text" id="email" class="i" placeholder="Email">
+                    <hr class="sign-hr">
+                    <button class="sign-btn" id="log-btn" onclick="changeEmail()">
+                        Modificar
+                    </button>
+                </div>
+            </div>
+            <div class="cover" onclick="emailHide()"></div>
+        </div>
+
+        <header>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="cart" onclick="showCart()">
+                    <img src="icons/cart.svg" alt="CART">
+                    <p>Carrinho</p>
+                </div>
+
+                <div class="account" id="acc" onclick="showProfile()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Conta</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="settings-data">
+                <p class="settings-data-header">Configurações <img src="icons/settings.gif" alt="" style="width: 5vh; height: 5vh;"></p>
+                <div class="user-info-item-data set">
+                    <p>Telefone: <span id="phone-number"></span>
+                        <img src="icons/pencil.svg" alt="pencil" class="i2" style="width:18px; height: 18px; cursor:pointer;" onclick="phoneDisplay()"></p>
+                </div>
+                <div class="stick set-st"></div>
+                <div class="user-info-item-data set">
+                    <p>Email: <span id="email"></span> <img src="icons/pencil.svg" alt="pencil" class="i3" style="width:18px; height: 18px; cursor:pointer" onclick="emailDisplay()"></p>
+                </div>
+                <div class="stick set-st"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo non-copy">
+                <a href="#" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="about-us">
+                    <a href="about-us.html">Sobre</a>
+                </div>
+                <div class="sf" style="display: none;"></div>
+                <div class="contacts">
+                    <a href="contacts.html">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

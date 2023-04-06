@@ -1,0 +1,144 @@
+.user-info {
+    padding: 5vh 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10vh;
+}
+
+.user-info-item {
+    padding: 5vh;
+    background-color: var(--main);
+    height: fit-content;
+    width: 25vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info-item-header {
+    text-align: center;
+    margin-top: 3vh;
+    color: #111111;
+    margin-bottom: 5vh;
+    font-size: 3vw;
+}
+
+.user-info-item-data {
+    display: flex;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2vh;
+    font-size: 1.3vw;
+}
+
+span {
+    color: #111111;
+    margin-left: 1vw;
+}
+
+.stick {
+    background-color: #111111;
+    width: 25vw;
+    height: 2px;
+    margin-bottom: 7vh;
+}
+
+.account-logo {
+    background-color: var(--main);
+    border-radius: 100%;
+    padding: 1vw;
+    animation-name: logo-animate;
+    animation-duration: 2.2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo-animate {
+    from {
+        margin-left: 1500px;
+        background-color: #111111;
+    }
+    to {
+        margin-left: 0;
+        background-color: var(--main);
+    }
+}
+
+.user-info-item-change {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.3vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info-item-change p {
+    margin-right: 4vw;
+}
+
+.user-info-item-change button {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    background-color: #111111;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 2px;
+}
+
+
+.bought-items {
+    padding: 3vh;
+    padding-top: 5vh;
+    background-color: rgba(249, 87, 0, 0.3);
+    width: 50vw;
+    border-radius: 20px;
+    margin-left: 5vw;
+    border: 3px solid var(--main);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.bought-items-header {
+    color: var(--main);
+}
+
+#history-empty {
+    color: var(--main);
+    font-size: 2vw;
+    margin-top: 2vh;
+}
+
+#history-display {
+    color: var(--main);
+    padding-top: 5vh;
+}
+
+.s_table {
+    margin-left: 2vh;
+    width: 46vw;
+    margin-bottom: 3vh;
+}
+
+.tbl-footer-history {
+    margin-top: 35vh;
+}
+
+.history-table {
+    padding-top: 0;
+}
+
+.bg-account {
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 10vh;
+    top: -10vh;
+}

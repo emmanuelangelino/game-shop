@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Gamer Shop | Registrar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="cart" onclick="showCart()">
+                    <img src="icons/cart.svg" alt="CART">
+                    <p>Carrinho</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <img src="blobs/blob2.svg" alt="blob" class="blob">
+            <img src="blobs/blob1.svg" alt="blob" class="blob" style="right: 5vw">
+            <section>
+                <div class="register">
+                    <h1>Registro</h1>
+                    <div class="sign-card">
+                        <input type="text" id="f-name" class="i" placeholder="Nome" autofocus>
+                        <hr class="sign-hr">
+                        <input type="text" id="l-name" class="i" placeholder="Sobrenome">
+                        <hr class="sign-hr">
+                        <input type="text" id="phone" class="i" placeholder="Número do telefone">
+                        <hr class="sign-hr">
+                        <input type="text" id="email" class="i" placeholder="Email">
+                        <hr class="sign-hr">
+                        <input type="password" id="password" class="i" placeholder="Senha">
+                        <hr class="sign-hr">
+                        <input type="password" id="confirm-password" class="i" placeholder="Confirme a senha">
+                        <hr class="sign-hr">
+                        <button class="sign-btn" id="submit" onclick="regCheck()">Enviar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="logo non-copy">
+                <a href="#" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="about-us">
+                    <a href="about-us.html">Sobre</a>
+                </div>
+                <div class="sf" style="display: none;"></div>
+                <div class="contacts">
+                    <a href="contacts.html">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

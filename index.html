@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Gamer Shop | Início</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body onload="loadProducts()">
+    <div class="page">
+        <div id="log-window" class="hide">
+            <div class="sign">
+                <h1>Login</h1>
+                <div class="sign-card">
+                    <input type="text" id="phone" class="i" placeholder="Phone number">
+                    <hr class="sign-hr">
+                    <input type="password" id="password" class="i" placeholder="Password" autocomplete="off">
+                    <hr class="sign-hr">
+                    <p>
+                        Ainda não possui uma conta?
+                        <a href="register.html" style="text-decoration: underline;">Registrar</a>
+                    </p>
+                    <button class="sign-btn" id="log-btn" onclick="loginCheck()">
+                        Login
+                    </button>
+                </div>
+            </div>
+            <div class="cover" onclick="loginHide()"></div>
+        </div>
+
+        <header class="header-index">
+            <div class="logo non-copy">
+                <a href="#" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="cart" onclick="showCart()">
+                    <img src="icons/cart.svg" alt="CART">
+                    <p>Carrinho</p>
+                </div>
+
+                <div class="account" id="sign-in" onclick="loginDisplay()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Login</p>
+                </div>
+
+                <div class="account hide" id="acc" onclick="showProfile()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Conta</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <img src="img/Background.png" alt="Main Background" width="100%" class="main_bg">
+
+            <div class="cards_row">
+                <div>
+                    <div class="category-title ml-1">
+                        <img src="icons/mobo.svg" alt="Hardwares">
+                        <h1>Hardwares</h1>
+                    </div>
+                    <ul class="category-products" id="hardwares-category"></ul>
+                </div>
+            </div>
+
+            <div class="cards_row">
+                <div class="cards">
+                    <div class="category-title ml-1">
+                        <img src="icons/laptop.svg" alt="Notebooks">
+                        <h1>Notebooks</h1>
+                    </div>
+                    <ul class="category-products" id="notebooks-category"></ul>
+                </div>
+            </div>
+
+            <div class="cards_row">
+                <div class="cards">
+                    <div class="category-title ml-1">
+                        <img src="icons/phone.svg" alt="Smartphones">
+                        <h1>Smartphones</h1>
+                    </div>
+                    <ul class="category-products" id="smartphones-category"></ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo non-copy">
+                <a href="#" class="decor-none">Gamer Shop</a>
+            </div>
+            <div class="right-side uppercase non-copy">
+                <div class="about-us">
+                    <a href="about-us.html">Sobre</a>
+                </div>
+                <div class="sf" style="display: none;"></div>
+                <div class="contacts">
+                    <a href="contacts.html">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Gamer Shop | Sobre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div id="log-window" class="hide">
+            <div class="sign">
+                <h1>Login</h1>
+                <div class="sign-card">
+                    <input type="text" id="phone" class="i" placeholder="Telefone">
+                    <hr class="sign-hr">
+                    <input type="password" id="password" class="i" placeholder="Senha" autocomplete="off">
+                    <hr class="sign-hr">
+                    <p>
+                        Ainda não possui uma conta?
+                        <a href="register.html" style="text-decoration: underline;">Registrar</a>
+                    </p>
+                    <button class="sign-btn" id="log-btn" onclick="loginCheck()">
+                        Login
+                    </button>
+                </div>
+            </div>
+            <div class="cover" onclick="loginHide()"></div>
+        </div>
+
+        <header>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="cart" onclick="showCart()">
+                    <img src="icons/cart.svg" alt="CART">
+                    <p>Carrinho</p>
+                </div>
+
+                <div class="account" id="sign-in" onclick="loginDisplay()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Login</p>
+                </div>
+
+                <div class="account hide" id="acc" onclick="showProfile()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Conta</p>
+                </div>
+            </div>
+        </header>
+        <div class="content-wrapper">
+            <div class="aboutUs">
+                <p>Sobre nós</p>
+            </div>
+            <div class="cont">
+                <div style="font-weight: 300;">
+                    <p>Gamer Shop é uma loja de eletrônicos sediada em São Paulo,
+                        uma loja que vem crescendo a cada dia por conta de gente incrível como você.</p>
+                </div>
+                <div style="font-size: 25px; margin-top: 30px; text-align: right;">
+                    <p><em style="font-style: normal;">A Gamer Shop é membro da cooperativa Latina de eletrônicos X-emplo, 
+                        que conta com mais de x organizações de varejo de y países na America Latina,
+                        o que permite que a empresa responda rapidamente às tendências globais na demanda do consumidor
+                        e forneça aos nossos clientes as mais novas tecnologias voltadas ao mundo dos games.</em></em></p>
+                </div>
+            </div>
+            <div class="foo">
+                <div class="foo1">
+                    <div>
+                        <img src="icons/star.svg" alt="">
+                        <p>x anos <br>de história</p>
+                    </div>
+                </div>
+                <div class="foo1">
+                    <div>
+                        <img src="icons/user-groups.svg" alt="">
+                        <p>x empregados <br>no estado</p>
+                    </div>
+                </div>
+                <div class="foo1">
+                    <div>
+                        <img src="icons/shop.svg" alt="">
+                        <p>x lojas <br>em y regiões</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-ab">
+                <p>"A tecnologia é melhor quando une as pessoas", e foi acreditando nessa frase que nos inspiramos
+                    a melhorar a cada dia e investir nas pessoas, sejam elas nossos funcionários, sejam elas nossos clientes,
+                    porque no final do dia não é somente a fé na tecnologia, é a fé nas pessoas que nos move.
+                </p>
+            </div>
+            <div class="foo">
+                <div class="foo1">
+                    <div>
+                        <img src="icons/shopping-cart.svg" alt="">
+                        <p>x mil <br>vendas</p>
+                    </div>
+                </div>
+                <div class="foo1">
+                    <div>
+                        <img src="icons/automation.svg" alt="">
+                        <p>Suporte <br>técnico x/y </p>
+                    </div>
+                </div>
+                <div class="foo1">
+                    <div>
+                        <img src="icons/lease.svg" alt="">
+                        <p>x mil <br>clientes</p>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div id="product-item-container"></div>
+            </section>
+        </div>
+        <footer>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="about-us">
+                    <a href="about-us.html">Sobre</a>
+                </div>
+                <div class="sf" style="display: none;"></div>
+                <div class="contacts">
+                    <a href="contacts.html">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

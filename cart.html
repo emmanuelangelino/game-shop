@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Gamer Shop | Carrinho</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body onload="loadCart()">
+    <div class="page">
+        <div id="log-window" class="hide">
+            <div class="sign">
+                <h1>Login</h1>
+                <div class="sign-card">
+                    <input type="text" id="phone" class="i" placeholder="Phone number">
+                    <hr class="sign-hr">
+                    <input type="password" id="password" class="i" placeholder="Password" autocomplete="off">
+                    <hr class="sign-hr">
+                    <p>
+                        Ainda não possui uma conta?
+                        <a href="register.html" style="text-decoration: underline;">Registrar</a>
+                    </p>
+                    <button class="sign-btn" id="log-btn" onclick="loginCheck()">
+                        Login
+                    </button>
+                </div>
+            </div>
+            <div class="cover" onclick="loginHide()"></div>
+        </div>
+
+        <div id="buy-window" class="hide">
+            <div class="modal">
+                <div class="buy">
+                    <h3 class="buy-modal-header">Pagamento</h3>
+                    <form action="#">
+                        <div class="buy-card">
+                            <input type="text" id="card-number" class="i" placeholder="NÚMERO DO CARTÃO" required>
+                            <hr class="sign-hr">
+                            <div class="props">
+                                <div class="exp-date-div">
+                                    <input type="text" id="exp-date" class="i" placeholder="MM/AA" required>
+                                    <hr class="sign-hr">
+                                </div>
+                                <div class="cvv-div">
+                                    <input type="password" id="cvv" maxlength="3" class="i" placeholder="CVV" required>
+                                    <hr class="sign-hr">
+                                </div>
+                            </div>
+                            <button class="buy-btn" onclick="buy()">
+                                Comprar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="total" style="color: var(--main)">
+                    <h4><i class="fa fa-shopping-cart"></i> Carrinho
+                        <span id="itemCount" style="color: var(--main)">0</span>
+                    </h4>
+                    <ul id="buyProducts" style="list-style: none;text-align: left">
+
+                    </ul>
+                    <h4>Total <span id="totalAmount" style="color: var(--main)">R$ 0,00</span></h4>
+                </div>
+            </div>
+            <div class="cover1" onclick="buyHide()"></div>
+        </div>
+
+        <header>
+            <div class="logo non-copy">
+                <a href="index.html" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="cart">
+                    <img src="icons/cart.svg" alt="CART">
+                    <p>Carrinho</p>
+                </div>
+
+                <div class="account" id="sign-in" onclick="loginDisplay()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Login</p>
+                </div>
+
+                <div class="account hide" id="acc" onclick="showProfile()">
+                    <img src="icons/account.svg" alt="ACCOUNT">
+                    <p>Conta</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <section>
+                <div id="cart-is-empty" class="hide">
+                    <h1>Oops...</h1>
+                    <h1>Seu carrinho está vazio!</h1>
+                </div>
+                <div id="cart-display" class="hide">
+                    <div class="tbl-heading">
+                        <h1>Carrinho de compras</h1>
+                    </div>
+
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                    <th width="50%">Nome do produto</th>
+                                    <th class='text-center' width="15%">Preço</th>
+                                    <th class='text-center' width="15%">Quantidade</th>
+                                    <th class='text-center' width="15%">Valor total</th>
+                                    <th width="5%"></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tbody id="cartTableBody">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tbl-footer">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tfoot>
+                                <tr>
+                                    <td width="50%"></td>
+                                    <td class="text-center" width="15%">Total:</td>
+                                    <td id="table-itemCount" class="text-center" colspan="2" width="15%"></td>
+                                    <td id="table-totalAmount" class="text-center" width="15%"></td>
+                                    <td width="5%"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div>
+                        <button onclick="buyDisplay()" id="btnBuy" class="btnBuy btn">Comprar</button>
+                        <button onclick="emptyCart()" id="btnEmpty" class="btnEmpty btn">Carrinho vazio</button>
+                    </div>
+                </div>
+            </section>
+            <section style="padding-top: 10vh;">
+                <div id="product-item-container"></div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="logo non-copy">
+                <a href="#" class="decor-none">Gamer Shop</a>
+            </div>
+
+            <div class="right-side uppercase non-copy">
+                <div class="about-us">
+                    <a href="about-us.html">Sobre</a>
+                </div>
+                <div class="sf" style="display: none;"></div>
+                <div class="contacts">
+                    <a href="contacts.html">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

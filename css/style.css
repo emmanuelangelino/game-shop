@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("header.css");
+@import url("footer.css");
+@import url("index.css");
+@import url("account.css");
+@import url("about-us.css");
+@import url("contacts.css");
+@import url("register.css");
+@import url("cart.css");
+@import url("settings.css");
+@import url("toast.style.css");
+@import url("media.css");
+
+
+:root {
+	--main: #f95700;
+}
+
+* {
+  	margin: 0;
+  	padding: 0;
+  	font-family: sans-serif, serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+.page {
+  	position: relative;
+  	min-height: 100vh;
+}
+
+.cover, .cover1 {
+	position: absolute;
+	z-index: 25;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content-wrapper {
+  	padding-bottom: 7rem;
+}
+
+.cards_row {
+    padding: 0 5vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+section {
+	padding: 0 5vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+body {
+    background-color: #111111;
+}
+
+.buttons {
+	margin-top: 3vh;
+}
+
+.categories {
+    padding: 1vh;
+    height: 5vh;
+}
+
+.btn {
+	border: 2px solid var(--main);
+	border-radius: 2vw;
+	outline: 0;
+	padding: 1vh;
+	margin: 1vh;
+	color: var(--main);
+	background-color: #111111;
+	text-align: center;
+	cursor: pointer;
+	width: 12.5vw;
+	font-size: 1vw;
+	-webkit-border-radius: 2vw;
+	-moz-border-radius: 2vw;
+	-ms-border-radius: 2vw;
+	-o-border-radius: 2vw;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+    height: 5vh;
+}
+
+.btn:hover {
+	border: 2px solid var(--main);
+	color: #111111;
+	background-color: var(--main);
+}
+
+hr {
+	width: 23vw;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 0.1px solid;
+	margin-left: 12px;
+}
+
+.hide {
+	position: absolute;
+	visibility: hidden;
+}
+
+.ml-1 {
+	margin-left: 1vw;
+	color: white;
+}
+
+.mr-1 {
+	margin-right: 1vw;
+}
+
+.wishlist-add {
+	margin-top: 5px;
+	margin-left: 5px;
+	position: absolute;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.blob {
+	position: absolute;
+	height: 90vh;
+}
+
+::-webkit-scrollbar {
+	scroll-behavior: smooth;
+	width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+  	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--main);
+	border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #c15114;
+}
